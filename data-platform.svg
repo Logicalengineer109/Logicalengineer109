@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <title>How I build data platforms: sources, ingestion, lakehouse and warehouse layers, modeling, and serving to BI, ML and AI, with orchestration, quality and governance underneath</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#58a6ff"/>
+    </marker>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f6feb" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#8957e5" stop-opacity=".22"/>
+    </linearGradient>
+    <style>
+      .box { fill: #161b22; stroke: #30363d; stroke-width: 1.5; }
+      .hl { fill: url(#core); stroke: #8957e5; stroke-width: 1.8; }
+      .layer { fill: #0d1117; stroke: #30363d; stroke-width: 1.2; }
+      .head { fill: #f0f6fc; font-size: 16px; font-weight: 700; }
+      .lh { fill: #f0f6fc; font-size: 13px; font-weight: 700; }
+      .tag { font-size: 11px; font-weight: 700; letter-spacing: 1.2px; }
+      .t { fill: #8b949e; font-size: 12.5px; }
+      .flow { stroke: #58a6ff; stroke-width: 2; fill: none; stroke-dasharray: 6 5; animation: dash 1.4s linear infinite; }
+      @keyframes dash { to { stroke-dashoffset: -22; } }
+    </style>
+  </defs>
+
+  <rect width="1000" height="500" rx="14" fill="#0d1117"/>
+
+  <!-- Sources -->
+  <rect class="box" x="20" y="60" width="160" height="250" rx="12"/>
+  <text class="tag" x="36" y="86" fill="#3fb950">SOURCES</text>
+  <text class="head" x="36" y="110">Where data lives</text>
+  <text class="t" x="36" y="136">Postgres · MySQL</text>
+  <text class="t" x="36" y="156">SQL Server</text>
+  <text class="t" x="36" y="176">REST and SaaS APIs</text>
+  <text class="t" x="36" y="196">ERP · CRM · Shopify</text>
+  <text class="t" x="36" y="216">Event streams</text>
+  <text class="t" x="36" y="236">SFTP and flat files</text>
+  <text class="t" x="36" y="256">Third-party feeds</text>
+
+  <!-- Ingestion -->
+  <rect class="box" x="210" y="60" width="175" height="250" rx="12"/>
+  <text class="tag" x="226" y="86" fill="#58a6ff">INGESTION</text>
+  <text class="head" x="226" y="110">Batch · CDC · Stream</text>
+  <text class="t" x="226" y="136">Kafka · Kafka Connect</text>
+  <text class="t" x="226" y="156">Debezium CDC</text>
+  <text class="t" x="226" y="176">Kinesis · Snowpipe</text>
+  <text class="t" x="226" y="196">Python API loaders</text>
+  <text class="t" x="226" y="216">Watermarks, MERGE</text>
+  <text class="t" x="226" y="236">Idempotent reruns</text>
+  <text class="t" x="226" y="256">Schema drift checks</text>
+
+  <!-- Lakehouse / Warehouse -->
+  <rect class="hl" x="415" y="45" width="230" height="280" rx="12"/>
+  <text class="tag" x="431" y="71" fill="#bc8cff">LAKEHOUSE · WAREHOUSE</text>
+  <text class="head" x="431" y="95">Snowflake · Databricks</text>
+  <text class="t" x="431" y="115">BigQuery · Redshift · Delta</text>
+
+  <rect class="layer" x="431" y="130" width="198" height="54" rx="8"/>
+  <text class="lh" x="445" y="152" fill="#d29922">Bronze · Raw</text>
+  <text class="t" x="445" y="172">Landed as-is, replayable</text>
+
+  <rect class="layer" x="431" y="192" width="198" height="54" rx="8"/>
+  <text class="lh" x="445" y="214">Silver · Staged</text>
+  <text class="t" x="445" y="234">Cleaned, deduped, typed</text>
+
+  <rect class="layer" x="431" y="254" width="198" height="54" rx="8"/>
+  <text class="lh" x="445" y="276" fill="#d29922">Gold · Marts</text>
+  <text class="t" x="445" y="296">Facts, dims, SCD2</text>
+
+  <!-- Transform -->
+  <rect class="box" x="675" y="60" width="150" height="250" rx="12"/>
+  <text class="tag" x="691" y="86" fill="#d29922">TRANSFORM</text>
+  <text class="head" x="691" y="110">dbt · Spark</text>
+  <text class="t" x="691" y="136">Kimball models</text>
+  <text class="t" x="691" y="156">Incremental models</text>
+  <text class="t" x="691" y="176">Data contracts</text>
+  <text class="t" x="691" y="196">Semantic layer</text>
+  <text class="t" x="691" y="216">Metric definitions</text>
+  <text class="t" x="691" y="236">PySpark at scale</text>
+  <text class="t" x="691" y="256">Docs and lineage</text>
+
+  <!-- Serve -->
+  <rect class="box" x="850" y="45" width="130" height="85" rx="12"/>
+  <text class="tag" x="864" y="70" fill="#3fb950">ANALYTICS</text>
+  <text class="t" x="864" y="94">Power BI</text>
+  <text class="t" x="864" y="112">Looker · Tableau</text>
+
+  <rect class="box" x="850" y="142" width="130" height="85" rx="12"/>
+  <text class="tag" x="864" y="167" fill="#bc8cff">ML</text>
+  <text class="t" x="864" y="191">MLflow</text>
+  <text class="t" x="864" y="209">Feature Store</text>
+
+  <rect class="box" x="850" y="239" width="130" height="86" rx="12"/>
+  <text class="tag" x="864" y="264" fill="#f778ba">AI</text>
+  <text class="t" x="864" y="288">Cortex · RAG</text>
+  <text class="t" x="864" y="306">MCP servers</text>
+
+  <!-- Arrows -->
+  <path class="flow" d="M182 185 H206" marker-end="url(#arrow)"/>
+  <path class="flow" d="M387 185 H411" marker-end="url(#arrow)"/>
+  <path class="flow" d="M647 185 H671" marker-end="url(#arrow)"/>
+  <path class="flow" d="M827 150 C838 150 836 88 846 88" marker-end="url(#arrow)"/>
+  <path class="flow" d="M827 185 H846" marker-end="url(#arrow)"/>
+  <path class="flow" d="M827 220 C838 220 836 282 846 282" marker-end="url(#arrow)"/>
+
+  <!-- Foundation -->
+  <rect class="box" x="20" y="345" width="960" height="60" rx="12"/>
+  <text class="tag" x="40" y="370" fill="#58a6ff">ORCHESTRATED BY</text>
+  <text class="t" x="40" y="392">Airflow  ·  Dagster  ·  Prefect  ·  Databricks Workflows  ·  GitHub Actions  ·  Scheduling, backfills, retries and failure recovery</text>
+
+  <rect class="box" x="20" y="417" width="960" height="63" rx="12"/>
+  <text class="tag" x="40" y="442" fill="#3fb950">TRUSTED BECAUSE OF</text>
+  <text class="t" x="40" y="464">dbt tests · Great Expectations · freshness SLAs · anomaly alerts · Unity Catalog · RBAC · PII masking · Terraform · CI/CD · cost monitoring</text>
+</svg>
