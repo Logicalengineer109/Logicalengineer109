@@ -12,12 +12,11 @@
 <img src="https://capsule-render.vercel.app/api?type=slice&color=0:0b1320,55:0f766e,100:10b981&height=200&section=header&text=Logical%20Engineer&fontSize=46&fontColor=e6fffa&fontAlign=30&fontAlignY=38&desc=Senior%20Data%20Engineer%20%C2%B7%20Sydney%2C%20Australia&descSize=17&descAlign=30&descAlignY=58&rotate=0" width="100%" alt="Logical Engineer, Senior Data Engineer" />
 
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=19&pause=1600&color=2DD4BF&center=true&vCenter=true&width=780&lines=%3E+SELECT+*+FROM+pipelines+WHERE+trusted+%3D+true%3B;%3E+dbt+build+--select+marts+%E2%9C%94+all+tests+passed;%3E+kafka+%E2%86%92+spark+%E2%86%92+delta+%7C+streaming+in+near+real+time;%3E+airflow+dags+trigger+daily_elt+%E2%9C%94+success;%3E+8%2B+years+turning+raw+data+into+decisions" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=19&pause=1600&color=2DD4BF&center=true&vCenter=true&width=780&lines=%3E+SELECT+*+FROM+pipelines+WHERE+trusted+%3D+true%3B;%3E+dbt+build+--select+marts+%E2%9C%94+all+tests+passed;%3E+kafka+%E2%86%92+spark+%E2%86%92+delta+%7C+streaming+in+near+real+time;%3E+airflow+dags+trigger+daily_elt+%E2%9C%94+success;%3E+raw+data+%E2%86%92+trusted+models+%E2%86%92+better+decisions" alt="Typing SVG" />
 </a>
 
 <br/>
 
-![experience](https://img.shields.io/badge/experience-8%2B%20years-10b981?style=flat&labelColor=0b1320)
 ![focus](https://img.shields.io/badge/focus-batch%20%C2%B7%20streaming%20%C2%B7%20CDC-0f766e?style=flat&labelColor=0b1320)
 ![warehouses](https://img.shields.io/badge/warehouses-Snowflake%20%C2%B7%20Databricks%20%C2%B7%20BigQuery-0f766e?style=flat&labelColor=0b1320)
 ![pipelines](https://img.shields.io/badge/pipelines-passing-10b981?style=flat&labelColor=0b1320&logo=apacheairflow&logoColor=white)
@@ -25,18 +24,6 @@
 </div>
 
 <br/>
-
-```yaml
-engineer:
-  name: Logical Engineer
-  role: Senior Data Engineer
-  experience: 8+ years
-  based_in: Sydney, Australia
-  owns: [ingestion, streaming & CDC, warehouse modeling, orchestration, data quality]
-  core_stack: [Python, SQL, Snowflake, Databricks, dbt, Airflow, Kafka, Spark]
-  serves: [analytics engineers, product teams, BI, ML & AI]
-  domains: [SaaS, FinTech, Healthcare, E-commerce, Retail, AdTech, Insurance]
-```
 
 I build the data infrastructure that product and business decisions run on. My work starts at messy source systems (production databases, event streams, SaaS APIs and flat files) and ends at **data models that analysts, dashboards and ML systems can trust without double-checking**. Along the way I care about three things: **correctness, observability and cost**.
 
